@@ -1,0 +1,105 @@
+.cards-all {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: '/imagemdefundoviagens.jpg'; /* Imagem de fundo padrão */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 0; /* Certifique-se de que a imagem de fundo esteja atrás dos cards */
+}
+
+.card {
+    width: 330px;
+    background: rgba(22, 22, 22, 0.445);
+    padding: .4em;
+    border-radius: 20px;
+    height: 385px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+  
+  .cards-container {
+    position: relative;
+    z-index: 1; /* Certifique-se de que os cards estejam à frente da imagem de fundo */
+}
+
+  .card-image {
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    height: 198px;
+    border-radius: 20px;
+  }
+  
+  .card-image:hover {
+    transform: scale(0.98);
+  }
+  
+  .category {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: white;
+    padding: 1px 4px 0;
+  }
+  
+  .category:hover {
+    cursor: pointer;
+  }
+  
+  .heading {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    padding: 7px;
+  }
+  
+  .heading:hover {
+    cursor: pointer;
+  }
+  
+  .category-location {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: white;
+    padding: 1px 4px 0;
+  }
+
+  .category-location:hover {
+    cursor: pointer;
+  }
+
+  .buttonsall button {
+    position: relative;
+    z-index: 1;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 4px;
+    font-weight: 600;
+    background-color: #ffffffa1;
+}
+
+/* Estilos para telas médias */
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 10px); /* Divide em duas colunas com margens */
+        margin: 5px;
+    }
+}
+
+/* Estilos para telas pequenas */
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%; /* Uma coluna em telas pequenas */
+        margin: 5px 0; /* Margem superior e inferior para os cards */
+    }
+
+    .buttonsall button {
+        width: calc(33% - 5px); /* Divide em três colunas com margens */
+    }
+}
